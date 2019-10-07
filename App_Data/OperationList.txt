@@ -1,0 +1,4 @@
+﻿Operation1 variableA+variableB
+Operation2 variableA-variableB
+Operation3 variableC/variableD
+Operation4 variableC*variableD

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CSSAssignment.Models.ThresholdResult>
+
+@{
+    ViewBag.Title = "Rule Result List";
+}
+
+<h2>Rule Result List</h2>
+
+<p>
+    @Html.ActionLink("Load New Data", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ThresholdId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntityId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OperationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComparisonDetail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Result)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ThresholdId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EntityId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.OperationId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ComparisonDetail)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Result)
+    </td>
+    @*<td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>*@
+</tr>
+}
+
+</table>

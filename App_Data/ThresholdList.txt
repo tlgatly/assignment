@@ -1,0 +1,3 @@
+﻿Threshold1 Operation1< 10
+Threshold2 Operation2> 20
+Threshold3 Operation3< 0.1
